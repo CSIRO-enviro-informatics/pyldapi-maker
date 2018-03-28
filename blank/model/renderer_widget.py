@@ -63,20 +63,19 @@ class WidgetRenderer(Renderer):
     def load_data(self, widget_id):
         """A dummy data loader function
         """
-        if widget_id == 1:
-            import json
-            data = json.load('dummy_widget_1.json')
-            self.name = data['name']
-            self.description = data['description']
-            self.creation_date = data['creation_date']
-        elif widget_id == 2:
-            import json
-            data = json.load('dummy_widget_1.json')
-            self.name = data['name']
-            self.description = data['description']
-            self.creation_date = data['creation_date']
+        import json
+        if widget_id == str(1):
+            json_file = 'dummy_widget_1.json'
+        elif widget_id == str(2):
+            json_file = 'dummy_widget_2.json'
         else:
             raise ValueError('No widget with that ID was found')
+
+        json_file_content = open(os.path.join(os.path.dirname(os.path.realpath(__file__)), json_file))
+        data = json.load(json_file_content)
+        self.name = data['name']
+        self.description = data['description']
+        self.creation_date = data['creation_date']
 
     def render(self, view, format):
         """The required function used to determine how to create a rendering for each enabled view and format
