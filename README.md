@@ -11,7 +11,8 @@ This is a tiny script for creating the necessary folders for a [pyLDAPI](https:/
     * all of the modules needed for pyLDAPI are listed in the requirements.txt file that this script creates
     * note that only Pythnon 3+ is supported
 
-
+For information about how pyLDAPI actually works and how to use it, see that module's documentation:
+* <https://pypi.org/project/pyldapi>
 
 ## License
 This work is licensed using the Apache Software License license. See [LICENSE](LICENSE).
