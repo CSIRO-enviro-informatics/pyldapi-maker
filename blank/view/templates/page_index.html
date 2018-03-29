@@ -14,8 +14,8 @@
     {% for register in register_tree %}
         <tr>
             <td style="width: 20%"> <h3><a href={{register.get('uri')}}> {{register.get('uri')}}</a></h3> </td>
-            <td>{{register.get('description')}}</td>
-            <td>{{register.get('contained_item_class')}}</td>
+            <td>{{ register.get('description') }}</td>
+            <td><a href="{{ register.get('contained_item_class') }}">{{ register.get('contained_item_class') }}</a></td>
         </tr>
     {% endfor %}
     </table>
