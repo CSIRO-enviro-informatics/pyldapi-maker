@@ -21,9 +21,9 @@ def index(**args):
     return RegisterMasterRenderer(request, 'page_index.html', decorator.register_tree).render(view, format)
 
 
-@routes.route('/wiget/')
+@routes.route('/widget/')
 @decorator.register(
-    '/wiget/',
+    '/widget/',
     RegisterRenderer,
     contained_item_class=['http://example.com/ex#Widget'],
     description='This register contains instances of a dummy Widget class.'

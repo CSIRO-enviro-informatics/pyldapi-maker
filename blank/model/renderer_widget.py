@@ -1,3 +1,4 @@
+import os.path
 from flask import Response, render_template
 from rdflib import Graph, URIRef, RDF, RDFS, XSD, Namespace, Literal, BNode
 import _config as conf
